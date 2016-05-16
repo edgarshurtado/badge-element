@@ -29,9 +29,34 @@ Example:
 <dom-module id="badge-element">
   <template>
     <style>
+
+      :host ::content span {
+        display: block;
+        position: absolute;
+        background-color: #D92B00;
+        text-align: center;
+        transform: rotate(-45deg);
+        top: 20%;
+        left: -30%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding: 0.5em 2em;
+        color: white;
+        font-family: Calibri;
+
+      }
+
+      .wrapper {
+        position: relative;
+        width: var(--badge-width, 300px);
+        height: var(--badge-width, 300px);
+      }
     </style>
 
-    <h1>ready to go</h1>
+    <div class="wrapper">
+      <content></content>
+    </div>
   </template>
 
   <script>

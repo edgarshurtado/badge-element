@@ -15,27 +15,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <title>badge-element Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="../badge-element.html">
+    <style is="custom-style">
+      html, body {
+        margin: 0;
+      }
+      badge-element{
+        --badge-width: 149px;
+      }
+    </style>
   </head>
   <body>
 
     <badge-element>
+      <span> Deprecated </span>
     </badge-element>
 
     <script>
-      var badgeElement = document.querySelector('badge-element');
-
-      document.querySelector('#saybtn').addEventListener('click', function() {
-        alert(badgeElement.sayHello('Hallo!'));
-      });
-
-      document.querySelector('#laserbtn').addEventListener('click', function() {
-        badgeElement.fireLasers();
-      });
-
-      document.addEventListener("badge-element-lasers", function(e) {
-        console.log(e.detail.sound);
-      });
-
     </script>
 
   </body>
